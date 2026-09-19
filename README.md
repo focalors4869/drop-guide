@@ -9,10 +9,10 @@
 **Windows (PowerShell)**
 
 ```powershell
-node -v                                        # ไม่ขึ้นอะไร = ยังไม่มี Node ให้โหลด LTS จาก nodejs.org แล้วปิดเปิด terminal ใหม่
-npm install -g drop-transfer-cli               # ติดตั้ง CLI รันซ้ำได้ ไม่พัง
-setx DROP_URL "https://drop-4869.vercel.app"   # จำถาวร ใช้ได้ทุกหน้าต่างใหม่
-$env:DROP_URL="https://drop-4869.vercel.app"   # ให้หน้าต่างนี้ใช้ได้ทันที ไม่ต้องปิดเปิด
+node -v
+npm install -g drop-transfer-cli
+setx DROP_URL "https://drop-4869.vercel.app"
+$env:DROP_URL="https://drop-4869.vercel.app"
 ```
 
 **macOS / Linux**
