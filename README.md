@@ -1,7 +1,5 @@
 # drop — วิธีใช้
 
-repo นี้มีแค่คู่มือ ไม่มีโค้ด
-
 drop คือเว็บส่งไฟล์ชั่วคราว ไม่ต้องสมัคร ไม่ต้องล็อกอิน ไม่มีรหัสผ่าน
 คนส่งอัปโหลดเสร็จจะได้รหัสมาหนึ่งชุด แล้วส่งรหัสนั้นให้คนรับ
 ไฟล์จะอยู่ได้ 1 ชั่วโมงนับจากตอนอัปโหลด หลังจากนั้นโหลดไม่ได้อีก และถูกลบออกจากเซิร์ฟเวอร์
@@ -149,16 +147,13 @@ Node ที่ลงจากตัวติดตั้งของระบบ
 
 ## ข้อควรรู้
 
-- ไฟล์อัปโหลดตรงขึ้น Cloudflare R2 ไม่ได้วิ่งผ่านเซิร์ฟเวอร์ของแอป ขนาดสูงสุด 100 MB ต่อไฟล์ สูงสุด 20 ไฟล์ต่อดรอป
-- ไม่มีบัญชี ไม่มีรหัสผ่าน ใครถือรหัสอยู่ก็โหลดได้ จึงไม่ควรใช้ส่งอะไรที่อ่อนไหวมาก
+- ไฟล์อัปโหลขนาดสูงสุด 100 MB ต่อไฟล์ สูงสุด 20 ไฟล์ต่อดรอป
 - หมดอายุแล้วโหลดไม่ได้ทันที แต่ไฟล์จริงจะถูกลบออกจากที่เก็บภายในประมาณหนึ่งวัน
 - สั่ง `drop get -h` เพื่อดูตัวเลือกทั้งหมด
 
 ---
 
 # drop — how to use
-
-This repo is only a guide; there is no code in it.
 
 drop is a temporary file transfer service. No sign-up, no login, no password. The
 sender uploads and gets a code, then passes that code on. Files live for one hour
@@ -265,10 +260,7 @@ prompt shows it: `PS D:\>` means `D:\`.
 
 ## Notes
 
-- Uploads go straight to Cloudflare R2, not through the app. 100 MB per file, 20
-  files per drop.
-- There is no password, so anyone holding the code can download. Do not use it
-  for anything sensitive.
+- Uploads 100 MB per file, 20 files per drop.
 - Downloads stop at the one hour mark; the stored objects are removed within
   about a day.
 - `drop get -h` lists every option.
