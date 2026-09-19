@@ -19,16 +19,16 @@ drop คือเว็บส่งไฟล์ชั่วคราว ไม�
 
 ### วิธีที่ใช้ CLI (แนะนำถ้าได้หลายไฟล์)
 
-**1. เช็คก่อนว่ามี npm อยู่แล้วหรือยัง**
+**1. ถ้าเครื่องยังไม่มี npm**
+
+แปลว่ายังไม่มี Node.js ให้โหลดตัวติดตั้ง LTS จาก https://nodejs.org ติดตั้งตามปกติ
+เสร็จแล้ว **ปิด terminal แล้วเปิดใหม่** ขั้นนี้สำคัญ ถ้าไม่ปิดจะยังใช้คำสั่งไม่เจอ
+เช็คด้วยสองคำสั่งนี้ ถ้าขึ้นเลขเวอร์ชันแปลว่าใช้ได้
 
 ```bash
 node -v
 npm -v
 ```
-
-ขึ้นเลขเวอร์ชันทั้งคู่คือข้ามไปข้อ 2 ได้เลย (ขอแค่ Node 18.17 ขึ้นไป)
-ถ้าขึ้นว่าไม่เจอคำสั่ง แปลว่ายังไม่มี Node.js ให้โหลดตัวติดตั้ง LTS จาก https://nodejs.org
-ติดตั้งเสร็จแล้ว **ปิด terminal แล้วเปิดใหม่** ขั้นนี้สำคัญ ไม่งั้นจะยังใช้คำสั่งไม่เจอ
 
 **2. ติดตั้ง CLI ครั้งเดียวจบ**
 
@@ -99,12 +99,6 @@ Saved successfully.
 ยังไม่ได้ติดตั้ง หรือ terminal ยังไม่รู้จักคำสั่งใหม่
 รัน `npm install -g drop-transfer-cli` แล้วปิด terminal เปิดใหม่
 ถ้ายังไม่หาย เช็คว่าติดตั้งอยู่จริงไหมด้วย `npm ls -g drop-transfer-cli`
-
-**ติดตั้งผ่านแล้ว แต่ยังไม่เจอคำสั่ง `drop`**
-
-อาจมี Node สองชุดในเครื่อง เกิดกับคนที่ใช้ nvm อยู่แล้ว แล้วไปลงตัวติดตั้งของระบบทับอีกที
-เช็คว่าตอนนี้เรียก Node ตัวไหนอยู่ด้วย `which node` (macOS, Linux) หรือ `where node` (Windows)
-แล้วดูว่า npm เก็บของ global ไว้ที่ไหนด้วย `npm prefix -g` ถ้าได้คนละที่กับที่ควร ให้ลง CLI ใหม่
 
 **`Network error: could not reach http://localhost:3000`**
 
@@ -180,17 +174,16 @@ download each file. If a drop has one or two files, stop here.
 
 ### With the CLI
 
-**1. Check whether npm is already there.**
+**1. No npm yet?** That means no Node.js. Install the LTS build from
+https://nodejs.org, then **close and reopen your terminal** — otherwise the new
+commands are not on your `PATH` yet.
 
 ```bash
 node -v
 npm -v
 ```
 
-Two version numbers means you can skip straight to step 2, as long as Node is 18.17
-or newer. If either command is not found, install the LTS build from
-https://nodejs.org, then **close and reopen your terminal** — otherwise the new
-commands are not on your `PATH` yet.
+Both should print a version.
 
 **2. Install the CLI once.**
 
@@ -238,12 +231,6 @@ Codes ignore case and the dash: `abcde23456` works. The code alphabet has no
 **`drop` is not recognized / `command not found`** — not installed, or the
 terminal does not know about it yet. Install it, reopen the terminal, and check
 with `npm ls -g drop-transfer-cli`.
-
-**Installed, but `drop` still is not found** — you may have two Node installs, which
-happens after adding nvm on top of a system installer. Check which one is active with
-`which node` (macOS, Linux) or `where node` (Windows), and where npm keeps global
-packages with `npm prefix -g`. If those do not line up, reinstall the CLI using the
-Node you actually use.
 
 **`could not reach http://localhost:3000`** — the CLI has no server URL, so it
 assumed your own machine. Do step 3, or pass it inline:
