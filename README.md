@@ -11,8 +11,8 @@
 ```powershell
 node -v
 npm install -g drop-transfer-cli
-setx DROP_URL "https://drop-4869.vercel.app"
-$env:DROP_URL="https://drop-4869.vercel.app"
+setx DROP_URL "https://drop-ma.vercel.app"
+$env:DROP_URL="https://drop-ma.vercel.app"
 ```
 
 **macOS / Linux**
@@ -20,13 +20,13 @@ $env:DROP_URL="https://drop-4869.vercel.app"
 ```bash
 node -v
 npm install -g drop-transfer-cli
-export DROP_URL="https://drop-4869.vercel.app"
+export DROP_URL="https://drop-ma.vercel.app"
 ```
 
 อยากให้จำถาวรด้วย เติมบรรทัดนี้ลง `~/.zshrc` (macOS) หรือ `~/.bashrc` (Linux):
 
 ```bash
-export DROP_URL="https://drop-4869.vercel.app"
+export DROP_URL="https://drop-ma.vercel.app"
 ```
 
 พร้อมแล้ว ทุกครั้งต่อไปสั่งแค่นี้:
@@ -41,7 +41,7 @@ drop คือเว็บส่งไฟล์ชั่วคราว ไม�
 คนส่งอัปโหลดเสร็จจะได้รหัสมาหนึ่งชุด แล้วส่งรหัสนั้นให้คนรับ
 ไฟล์จะอยู่ได้ 1 ชั่วโมงนับจากตอนอัปโหลด หลังจากนั้นโหลดไม่ได้อีก และถูกลบออกจากเซิร์ฟเวอร์
 
-เว็บอยู่ที่ **https://drop-4869.vercel.app**
+เว็บอยู่ที่ **https://drop-ma.vercel.app**
 
 ---
 
@@ -49,7 +49,7 @@ drop คือเว็บส่งไฟล์ชั่วคราว ไม�
 
 ### วิธีที่เร็วที่สุด ไม่ต้องติดตั้งอะไรเลย
 
-เปิด **https://drop-4869.vercel.app/get** กรอกรหัส กด Find files แล้วกด Download ทีละไฟล์
+เปิด **https://drop-ma.vercel.app/get** กรอกรหัส กด Find files แล้วกด Download ทีละไฟล์
 ถ้าได้มาไม่กี่ไฟล์ จบแค่นี้ ไม่ต้องอ่านต่อ
 
 ### วิธีที่ใช้ CLI (แนะนำถ้าได้หลายไฟล์)
@@ -75,18 +75,18 @@ npm install -g drop-transfer-cli
 
 **3. บอกที่อยู่เซิร์ฟเวอร์ ครั้งเดียวจบ**
 
-ถ้าข้ามข้อนี้ ทุกครั้งต้องเติม `-u https://drop-4869.vercel.app` ต่อท้ายคำสั่งเอง
+ถ้าข้ามข้อนี้ ทุกครั้งต้องเติม `-u https://drop-ma.vercel.app` ต่อท้ายคำสั่งเอง
 
 Windows (PowerShell หรือ CMD):
 
 ```powershell
-setx DROP_URL "https://drop-4869.vercel.app"
+setx DROP_URL "https://drop-ma.vercel.app"
 ```
 
 macOS / Linux:
 
 ```bash
-export DROP_URL="https://drop-4869.vercel.app"
+export DROP_URL="https://drop-ma.vercel.app"
 ```
 
 เสร็จแล้ว **ปิด terminal แล้วเปิดใหม่** อีกครั้ง ถึงจะเริ่มใช้ค่าได้
@@ -141,7 +141,7 @@ Saved successfully.
 กลับไปทำข้อ 3 หรือสั่งแบบนี้แทน
 
 ```bash
-drop get -d ABC-234 -u https://drop-4869.vercel.app
+drop get -d ABC-234 -u https://drop-ma.vercel.app
 ```
 
 **`Invalid code: ...`**
@@ -198,13 +198,13 @@ drop is a temporary file transfer service. No sign-up, no login, no password. Th
 sender uploads and gets a code, then passes that code on. Files live for one hour
 and are then unreachable.
 
-Server: **https://drop-4869.vercel.app**
+Server: **https://drop-ma.vercel.app**
 
 ## Receiving
 
 ### No installs
 
-Open **https://drop-4869.vercel.app/get**, type the code, press *Find files*, and
+Open **https://drop-ma.vercel.app/get**, type the code, press *Find files*, and
 download each file. If a drop has one or two files, stop here.
 
 ### With the CLI
@@ -229,18 +229,18 @@ npm install -g drop-transfer-cli
 This gives you the `drop` command.
 
 **3. Tell it where the server is, once.** Skip this and you must add
-`-u https://drop-4869.vercel.app` to every command.
+`-u https://drop-ma.vercel.app` to every command.
 
 Windows:
 
 ```powershell
-setx DROP_URL "https://drop-4869.vercel.app"
+setx DROP_URL "https://drop-ma.vercel.app"
 ```
 
 macOS / Linux:
 
 ```bash
-export DROP_URL="https://drop-4869.vercel.app"
+export DROP_URL="https://drop-ma.vercel.app"
 ```
 
 Close and reopen the terminal for `setx` to take effect.
@@ -271,7 +271,7 @@ with `npm ls -g drop-transfer-cli`.
 assumed your own machine. Do step 3, or pass it inline:
 
 ```bash
-drop get -d ABC-234 -u https://drop-4869.vercel.app
+drop get -d ABC-234 -u https://drop-ma.vercel.app
 ```
 
 **`Invalid code`** — wrong shape. Codes look like `ABC-234`: three characters,
