@@ -20,7 +20,7 @@ $env:DROP_URL="https://drop-4869.vercel.app"
 ```bash
 node -v
 npm install -g drop-transfer-cli
-export DROP_URL="https://drop-4869.vercel.app"   # หน้าต่างนี้ใช้ได้ทันที
+export DROP_URL="https://drop-4869.vercel.app"
 ```
 
 อยากให้จำถาวรด้วย เติมบรรทัดนี้ลง `~/.zshrc` (macOS) หรือ `~/.bashrc` (Linux):
