@@ -32,7 +32,7 @@ export DROP_URL="https://drop-4869.vercel.app"
 พร้อมแล้ว ทุกครั้งต่อไปสั่งแค่นี้:
 
 ```bash
-drop get -d ABCDE-23456
+drop get -d ABC-234
 ```
 
 ---
@@ -94,14 +94,14 @@ export DROP_URL="https://drop-4869.vercel.app"
 **4. โหลดไฟล์**
 
 ```bash
-drop get -d ABCDE-23456
+drop get -d ABC-234
 ```
 
 ไฟล์จะไปอยู่ในโฟลเดอร์ที่คุณยืนอยู่ตอนพิมพ์คำสั่ง
 ถ้าอยากลงโฟลเดอร์อื่น ใส่ต่อท้ายได้เลย มันสร้างโฟลเดอร์ให้ถ้ายังไม่มี
 
 ```bash
-drop get -d ABCDE-23456 ./downloads
+drop get -d ABC-234 ./downloads
 ```
 
 ได้ผลลัพธ์แบบนี้:
@@ -121,7 +121,7 @@ Saved successfully.
 
 ### พิมพ์รหัสยังไงก็ได้
 
-ตัวพิมพ์เล็กพิมพ์ใหญ่ไม่สำคัญ และไม่ต้องใส่ dash ก็ได้ `abcde23456` ใช้ได้เหมือน `ABCDE-23456`
+ตัวพิมพ์เล็กพิมพ์ใหญ่ไม่สำคัญ และไม่ต้องใส่ dash ก็ได้ `abc234` ใช้ได้เหมือน `ABC-234`
 แต่ในรหัสจะไม่มีตัวอักษร **I, O** และเลข **0, 1** เลย ถ้าคิดว่าเห็นเป็นตัวนั้นให้เพ่งดูใหม่
 
 ---
@@ -141,12 +141,12 @@ Saved successfully.
 กลับไปทำข้อ 3 หรือสั่งแบบนี้แทน
 
 ```bash
-drop get -d ABCDE-23456 -u https://drop-4869.vercel.app
+drop get -d ABC-234 -u https://drop-4869.vercel.app
 ```
 
 **`Invalid code: ...`**
 
-รหัสผิดรูปแบบ ต้องเป็นตัวอักษรหรือเลข 5 ตัว ขีดกลาง แล้วต่อด้วย 5 ตัว เช่น `ABCDE-23456`
+รหัสผิดรูปแบบ ต้องเป็นตัวอักษรหรือเลข 3 ตัว ขีดกลาง แล้วต่อด้วย 3 ตัว เช่น `ABC-234`
 
 **`Drop not found`**
 
@@ -248,17 +248,17 @@ Close and reopen the terminal for `setx` to take effect.
 **4. Download.**
 
 ```bash
-drop get -d ABCDE-23456
+drop get -d ABC-234
 ```
 
 Files are written to the directory you are standing in. To put them somewhere
 else, add the path — the directory is created if it does not exist:
 
 ```bash
-drop get -d ABCDE-23456 ./downloads
+drop get -d ABC-234 ./downloads
 ```
 
-Codes ignore case and the dash: `abcde23456` works. The code alphabet has no
+Codes ignore case and the dash: `abc234` works. The code alphabet has no
 `I`, `O`, `0` or `1`, so if you think you see one, look again.
 
 ## Common problems
@@ -271,11 +271,11 @@ with `npm ls -g drop-transfer-cli`.
 assumed your own machine. Do step 3, or pass it inline:
 
 ```bash
-drop get -d ABCDE-23456 -u https://drop-4869.vercel.app
+drop get -d ABC-234 -u https://drop-4869.vercel.app
 ```
 
-**`Invalid code`** — wrong shape. Codes look like `ABCDE-23456`: five
-characters, a dash, five more.
+**`Invalid code`** — wrong shape. Codes look like `ABC-234`: three characters,
+a dash, three more.
 
 **`Drop not found`** — no such code. Typo, or the sender misread it.
 
