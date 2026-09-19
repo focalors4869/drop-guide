@@ -2,6 +2,41 @@
 
 **[ภาษาไทย](#drop--วิธีใช้) · [English](#drop--how-to-use)**
 
+## เตรียมเครื่อง (ทำครั้งเดียว) · Quick setup (once)
+
+คัดลอกวางใน terminal ได้เลย ตั้งแต่นั้นเป็นต้นไปจะสั่งแค่ `drop get -d <รหัส>`
+
+**Windows (PowerShell)**
+
+```powershell
+node -v                                        # ไม่ขึ้นอะไร = ยังไม่มี Node ให้โหลด LTS จาก nodejs.org แล้วปิดเปิด terminal ใหม่
+npm install -g drop-transfer-cli               # ติดตั้ง CLI รันซ้ำได้ ไม่พัง
+setx DROP_URL "https://drop-4869.vercel.app"   # จำถาวร ใช้ได้ทุกหน้าต่างใหม่
+$env:DROP_URL="https://drop-4869.vercel.app"   # ให้หน้าต่างนี้ใช้ได้ทันที ไม่ต้องปิดเปิด
+```
+
+**macOS / Linux**
+
+```bash
+node -v
+npm install -g drop-transfer-cli
+export DROP_URL="https://drop-4869.vercel.app"   # หน้าต่างนี้ใช้ได้ทันที
+```
+
+อยากให้จำถาวรด้วย เติมบรรทัดนี้ลง `~/.zshrc` (macOS) หรือ `~/.bashrc` (Linux):
+
+```bash
+export DROP_URL="https://drop-4869.vercel.app"
+```
+
+พร้อมแล้ว ทุกครั้งต่อไปสั่งแค่นี้:
+
+```bash
+drop get -d ABCDE-23456
+```
+
+---
+
 drop คือเว็บส่งไฟล์ชั่วคราว ไม่ต้องสมัคร ไม่ต้องล็อกอิน ไม่มีรหัสผ่าน
 คนส่งอัปโหลดเสร็จจะได้รหัสมาหนึ่งชุด แล้วส่งรหัสนั้นให้คนรับ
 ไฟล์จะอยู่ได้ 1 ชั่วโมงนับจากตอนอัปโหลด หลังจากนั้นโหลดไม่ได้อีก และถูกลบออกจากเซิร์ฟเวอร์
